@@ -1,0 +1,261 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//Variables
+$break-small: 768px;
+$break-large: 1200px;
+
+.container-video-margin{
+  @media screen and (max-width: $break-small) {
+    margin-top: 80px;
+  }
+}
+
+#home-wrapper{
+  width: 100%;
+}
+
+
+#video-wrapper{
+  width: 100%;
+  height: 100%;
+}
+
+#load-vid{
+  width: 100%;
+  height: 100%;
+}
+
+#load-vid-mobile{
+  width: 100%;
+  height: 100%;
+}
+
+#main-vid{
+  position:relative;
+}
+
+.img-tile{
+  width: 24.75%;
+  margin-right: .33%;
+  @media screen and (max-width: $break-small) {
+    width: 100%;
+    margin-right: 0%;
+  }
+
+}
+
+.last-img-tile{
+  margin-right: 0%;
+}
+
+#bgvid {
+  width: 100%    !important;
+  height: auto   !important;
+  position:relative;
+  z-index: -100;
+  /* background: url(polina.jpg) no-repeat; */
+  background-size: cover;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.text-vertical-center {
+    position:absolute;
+    top: 20%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 700;
+}
+
+.logo-nav{
+  margin-top: 5px;
+  width: 55px;
+}
+
+/* About */
+
+.about {
+    padding: 50px 0;
+    min-height: 100%;
+    background-color: #2196F3;
+    color: white;
+}
+
+.purchase-link{
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  width: 350px;
+  margin-left: -175px;
+  text-align: center;
+  vertical-align: middle;
+  @media screen and (max-width: $break-small) {
+    display: none;
+  }
+}
+
+.purchase-link-mobile{
+  width: 100%;
+}
+
+.purchase-link a{
+  font-size: 3em;
+  padding: 10px;
+  @media screen and (max-width: $break-small) {
+    font-size: 1em;
+    padding: 10px;
+  }
+}
+
+
+
+/* You can alter this CSS in order to give Smooth Div Scroll your own look'n'feel */
+
+/* Invisible left hotspot */
+div.scrollingHotSpotLeft
+{
+  /* The hotspots have a minimum width of 100 pixels and if there is room the will grow
+    and occupy 15% of the scrollable area (30% combined). Adjust it to your own taste. */
+  min-width: 75px;
+  width: 10%;
+  height: 100%;
+  /* There is a big background image and it's used to solve some problems I experienced
+    in Internet Explorer 6. */
+  background-repeat: repeat;
+  background-position: center center;
+  position: absolute;
+  z-index: 200;
+  left: 0;
+}
+
+/* Visible left hotspot */
+div.scrollingHotSpotLeftVisible
+{
+  background-color: #fff;
+  background-repeat: no-repeat;
+  opacity: 0.35; /* Standard CSS3 opacity setting */
+  -moz-opacity: 0.35; /* Opacity for really old versions of Mozilla Firefox (0.9 or older) */
+  filter: alpha(opacity = 35); /* Opacity for Internet Explorer. */
+  zoom: 1; /* Trigger "hasLayout" in Internet Explorer 6 or older versions */
+}
+
+/* Invisible right hotspot */
+div.scrollingHotSpotRight
+{
+  min-width: 75px;
+  width: 10%;
+  height: 100%;
+  background-repeat: repeat;
+  background-position: center center;
+  position: absolute;
+  z-index: 200;
+  right: 0;
+}
+
+/* Visible right hotspot */
+div.scrollingHotSpotRightVisible
+{
+  background-color: #fff;
+  background-repeat: no-repeat;
+  opacity: 0.35;
+  filter: alpha(opacity = 35);
+  -moz-opacity: 0.35;
+  zoom: 1;
+}
+
+/* The scroll wrapper is always the same width and height as the containing element (div).
+   Overflow is hidden because you don't want to show all of the scrollable area.
+*/
+div.scrollWrapper
+{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+div.scrollableArea
+{
+  position: relative;
+  width: auto;
+  height: 100%;
+}
+
+#logoParade
+    {
+      margin: 30px 0px;
+      width: 100%;
+      height: 180px;
+      position: relative;
+    }
+
+#logoParade div.scrollableArea a
+{
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: inline-block;
+  float: left;
+  padding-left: 10px;
+  margin-left: 100px;
+}
+
+#logoParade div.scrollableArea img
+{
+  width: 128px;
+  height: auto;
+  @media screen and (max-width: $break-small) {
+    width: 80px;
+
+  }
+}
+
+.section-photos a{
+  display: inline-block;
+  @media screen and (max-width: $break-small) {
+    width: 100%;
+  }
+}
+
+.section-photos{
+  width: 100%;
+  height: auto;
+}
+
+.fa-10x{
+  font-size: 10em !important;
+}
+
+.video-center{
+  margin: 0 auto;
+  margin-top: 10%;
+  width: 640px;
+  display: block;
+}
+
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+}

@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>Cityhabits</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => false %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="video-wrapper">
+      <video autoplay id="load-vid">
+        <source src="https://s3-us-west-1.amazonaws.com/cityhabits1/cityhabits/CityHabitsWith%2BGLitches.mp4" type="video/mp4">
+        <source src="https://s3-us-west-1.amazonaws.com/cityhabits1/cityhabits/CityHabitsWith_GLitches.ogv" type="video/ogg">
+      </video>
+    </div>
+  </body>
+</html>

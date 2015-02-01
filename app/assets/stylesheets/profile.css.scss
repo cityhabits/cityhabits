@@ -1,0 +1,15 @@
+// Place all the styles related to the profile controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user-pic{
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.profile-section{
+  margin-top: 30px;
+  border: 1px solid black;
+  background-color: white;
+  overflow: auto;
+}

@@ -1,0 +1,54 @@
+<div id="home-wrapper" class="container-video-margin">
+  <div id="main-vid">
+    <%if is_mobile? %>
+      <video autoplay poster="https://s3-us-west-1.amazonaws.com/cityhabits1/cityhabits/vlcsnap_2014_11_25_14h40m28s92.png" id="load-vid-mobile">
+        <source src="https://s3-us-west-1.amazonaws.com/cityhabits1/cityhabits/Heart+Break+Kids+--+SF+State+Rager.mp4" type="video/mp4">
+        <source src="https://s3-us-west-1.amazonaws.com/cityhabits1/cityhabits/Heart_Break_Kids_SF_State_Rager.ogv" type="video/ogg">
+      </video>
+
+      <%if purchase_true?%>
+      <div class="purchase-link-mobile">
+        <%= link_to("Purchase Tickets", events_path, html_options = {class: "btn btn-warning btn-block"}) %>
+      </div>
+      <% end %>
+      <br>
+    <% else %>
+      <video autoplay loop muted poster="https://s3-us-west-1.amazonaws.com/cityhabits1/cityhabits/vlcsnap_2014_11_25_14h40m28s92.png" id="bgvid">
+          <source src="https://s3-us-west-1.amazonaws.com/cityhabits1/cityhabits/Heart+Break+Kids+--+SF+State+Rager.mp4" type="video/mp4">
+          <source src="https://s3-us-west-1.amazonaws.com/cityhabits1/cityhabits/Heart_Break_Kids_SF_State_Rager.ogv" type="video/ogg">
+      </video>
+      <div class="text-vertical-center ">
+            <i class="bgvid-mute fa fa-volume-off fa-lg fa-5x fa-inverse"></i>
+      </div>
+      <%if purchase_true?%>
+      <div class="purchase-link">
+          <%= link_to("Purchase Tickets", events_path, html_options = {class: "btn btn-warning"}) %>
+      </div>
+      <% end %>
+    </div>
+      <% end %>
+        <div id="logoParade">
+          <% 2.times do #hack to make rotation happen%>
+          <a href="#"><img class="img-responsive" src="https://s3-us-west-1.amazonaws.com/cityhabits1/cityhabits/Logos/Clear_Channel_Logo-2.png"></a>
+          <a href="#"><img class="img-responsive" src="https://s3-us-west-1.amazonaws.com/cityhabits1/cityhabits/Logos/Pink+Dolphin.png"></a>
+          <a href="#"><img class="img-responsive" src="https://s3-us-west-1.amazonaws.com/cityhabits1/cityhabits/Logos/SFState.png"></a>
+          <a href="#"><img class="img-responsive" src="https://s3-us-west-1.amazonaws.com/cityhabits1/cityhabits/Logos/kmel_2014_logo_header_0_1413549119.png"></a>
+          <a href="#"><img class="img-responsive" src="https://s3-us-west-1.amazonaws.com/cityhabits1/cityhabits/Logos/phibetasigma.gif"></a>
+          <a href="#"><img class="img-responsive" src="https://s3-us-west-1.amazonaws.com/cityhabits1/cityhabits/Logos/youngcalifornia.png"></a>
+          <% end %>
+        </div>
+        <div class="container-full">
+          <div id="img" class="col-md-3 clean-reset img-tile">
+            <a href="http://instagram.com/cityhabits"><img src="https://s3-us-west-1.amazonaws.com/cityhabits1/cityhabits/Assets/Enter+2+Win+Photo.png" alt="" /></a>
+          </div>
+          <div id="img" class="col-md-3 clean-reset img-tile">
+            <a href="/albums"><img src="https://s3-us-west-1.amazonaws.com/cityhabits1/cityhabits/Assets/Photos+Here.png" alt="" /></a>
+          </div>
+          <div id="img" class="col-md-3 clean-reset img-tile">
+            <a href="http://www.careersushi.com/cityhabits"><img src="https://s3-us-west-1.amazonaws.com/cityhabits1/cityhabits/Assets/Join+photo.png" alt="" /></a>
+          </div>
+          <div id="img" class="col-md-3 clean-reset img-tile last-img-tile">
+            <a href="http://cityhabits.bigcartel.com/"><img src="https://s3-us-west-1.amazonaws.com/cityhabits1/cityhabits/Assets/City+Habits+Marketplace.png" alt="" /></a>
+          </div>
+        </div>
+      </div>

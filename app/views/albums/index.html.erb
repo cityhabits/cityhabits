@@ -1,0 +1,41 @@
+<div class="container container-content">
+  <div class="event-photo-container">
+    <h2>Photo Albums</h2>
+    <% @albums.in_groups_of(4) do |album1, album2, album3, album4| %>
+    <div class="row row-event-photos">
+      <% if album1 %>
+      <div class="col-md-3">
+        <a href="/albums/<%=album1.id%>/" class="img-responsive">
+          <%= image_tag(album1.event_photos.last.photo.url(:square), class: "image-resource") %>
+          <h3 class="album-center-text"><%= album1.name %></h3>
+      </a>
+      </div>
+      <% end %>
+      <% if album2 %>
+      <div class="col-md-3">
+        <a href="/albums/<%=album2.id%>/" class="img-responsive">
+          <%= image_tag(album1.event_photos.last.photo.url(:square), class: "image-resource") %>
+          <h3 class="album-center-text"><%= album2.name %></h3>
+        </a>
+      </div>
+      <% end %>
+      <% if album3 %>
+      <div class="col-md-3">
+        <a href="/albums/<%=album3.id%>/" class="img-responsive">
+          <%= image_tag(album1.event_photos.last.photo.url(:square), class: "image-resource") %>
+          <h3 class="album-center-text"><%= album3.name %></h3>
+        </a>
+      </div>
+      <% end %>
+      <% if album4 %>
+      <div class="col-md-3">
+        <a href="/albums/<%=album4.id%>/" class="img-responsive">
+          <%= image_tag(album1.event_photos.last.photo.url(:square), class: "image-resource") %>
+          <h3 class="album-center-text"><%= album4.name %></h3>
+        </a>
+      </div>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+</div>

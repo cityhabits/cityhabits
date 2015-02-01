@@ -1,0 +1,6 @@
+<div class="container container-content">
+<%= simple_form_for [@album, @event_photo ], html: {multipart: true} do |f| %>
+  <%= file_field_tag('event_album_photos_photo', multiple: true, name: "event_photo[photo][]")%>
+  <%= f.button :submit %>
+<% end %>
+</div>

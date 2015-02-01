@@ -1,0 +1,50 @@
+<div class="container container-content">
+  <div class="event-photo-container">
+    <% @event_photos.in_groups_of(4) do |photo1, photo2, photo3, photo4| %>
+    <div class="row row-event-photos">
+      <% if photo1 %>
+      <div class="col-md-3">
+        <a href="#" class="img-responsive image-pop">
+          <%= image_tag(photo1.photo.url(:square), class: "image-resource") %>
+        </a>
+      </div>
+      <% end %>
+      <% if photo2 %>
+      <div class="col-md-3">
+        <a href="#" class="img-responsive image-pop">
+          <%= image_tag(photo2.photo.url(:square), class: "image-resource") %>
+        </a>
+      </div>
+      <% end %>
+      <% if photo3 %>
+      <div class="col-md-3">
+        <a href="#" class="img-responsive image-pop">
+          <%= image_tag(photo3.photo.url(:square), class: "image-resource") %>
+        </a>
+      </div>
+      <% end %>
+      <% if photo4 %>
+      <div class="col-md-3">
+        <a href="#" class="img-responsive image-pop">
+          <%= image_tag(photo4.photo.url(:square), class: "image-resource") %>
+        </a>
+      </div>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <img src="" id="imagepreview" >
+      </div>
+      <div class="modal-footer">
+        <a id="download-link" class="btn btn-primary pull-left" href="" download>Download</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
