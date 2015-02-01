@@ -6,7 +6,11 @@
       <% if album1 %>
       <div class="col-md-3">
         <a href="/albums/<%=album1.id%>/" class="img-responsive">
+          <%if(album1.event_photos.last)%>
           <%= image_tag(album1.event_photos.last.photo.url(:square), class: "image-resource") %>
+          <% else %>
+          <%= image_tag("https://upload.wikimedia.org/wikipedia/commons/4/47/Comic_image_missing.png", class: "image-resource")%>
+          <% end %>
           <h3 class="album-center-text"><%= album1.name %></h3>
       </a>
       </div>
@@ -14,7 +18,11 @@
       <% if album2 %>
       <div class="col-md-3">
         <a href="/albums/<%=album2.id%>/" class="img-responsive">
-          <%= image_tag(album1.event_photos.last.photo.url(:square), class: "image-resource") %>
+          <%if(album2.event_photos.last)%>
+          <%= image_tag(album2.event_photos.last.photo.url(:square), class: "image-resource") %>
+          <% else %>
+          <%= image_tag("https://upload.wikimedia.org/wikipedia/commons/4/47/Comic_image_missing.png", class: "image-resource")%>
+          <% end %>
           <h3 class="album-center-text"><%= album2.name %></h3>
         </a>
       </div>
@@ -22,7 +30,11 @@
       <% if album3 %>
       <div class="col-md-3">
         <a href="/albums/<%=album3.id%>/" class="img-responsive">
-          <%= image_tag(album1.event_photos.last.photo.url(:square), class: "image-resource") %>
+          <%if(album3.event_photos.last)%>
+          <%= image_tag(album3.event_photos.last.photo.url(:square), class: "image-resource") %>
+          <% else %>
+          <%= image_tag("https://upload.wikimedia.org/wikipedia/commons/4/47/Comic_image_missing.png", class: "image-resource")%>
+          <% end %>
           <h3 class="album-center-text"><%= album3.name %></h3>
         </a>
       </div>
@@ -30,7 +42,11 @@
       <% if album4 %>
       <div class="col-md-3">
         <a href="/albums/<%=album4.id%>/" class="img-responsive">
-          <%= image_tag(album1.event_photos.last.photo.url(:square), class: "image-resource") %>
+          <%if(album4.event_photos.last)%>
+          <%= image_tag(album4.event_photos.last.photo.url(:square), class: "image-resource") %>
+          <% else %>
+          <%= image_tag("https://upload.wikimedia.org/wikipedia/commons/4/47/Comic_image_missing.png", class: "image-resource")%>
+          <% end %>
           <h3 class="album-center-text"><%= album4.name %></h3>
         </a>
       </div>
