@@ -1,9 +1,7 @@
 class Event < ActiveRecord::Base
-  # has_many :event_photos
-  # accepts_nested_attributes_for :event_photos, :allow_destroy => true
-
   validates :name, presence: true
   validates :description, presence: true
+  before_save :smart_add_url_protocol
 
 
  # This method associates the attribute ":avatar" with a file attachment
@@ -16,4 +14,14 @@ class Event < ActiveRecord::Base
   has_attached_file :avatar, :default_url => "https://upload.wikimedia.org/wikipedia/commons/4/47/Comic_image_missing.png"
   # Validate the attached image is image/jpg, image/png, etc
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+
+  protected
+
+  def smart_add_url_protocol
+    unless self.event_page_url[/\Ahttp:\/\//] || self.event_page_url[/\Ahttps:\/\//]
+      self.event_page_url = "http://#{self.event_page_url}"
+    end
+  end
+
+
 end
